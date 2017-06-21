@@ -1,0 +1,8 @@
+<h1> here all da requests</h1>
+<ul>
+  <% @rentals.each do |rental| %>
+    <li>
+      <%= link_to "#{rental.cat.name}", cat_rental_requests_path(rental) %>
+    </li>
+  <% end %>
+</ul>

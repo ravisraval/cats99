@@ -1,18 +1,9 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <title>All the cats!</title>
-  </head>
-  <body>
-    <h1>Here are our cats!</h1>
-    <ul>
-      <% @cats.each do |cat| %>
-        <li>
-          <%= link_to "#{cat.name}", google.com %>
-        </li>
-      <% end %>
-    </ul>
 
-  </body>
-</html>
+<h1>Here are our cats!</h1>
+<ul>
+  <% @cats.each do |cat| %>
+    <li>
+      <%= link_to "#{cat.name}", cat_path(cat) %>
+    </li>
+  <% end %>
+</ul>
